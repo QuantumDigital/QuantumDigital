@@ -215,11 +215,11 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'acquia_drupal',
+      'database' => 'quantum_digital',
       'username' => 'drupaluser',
       'password' => '',
       'host' => '127.0.0.1',
-      'port' => '33066',
+      'port' => '3306',
       'driver' => 'mysql',
       'prefix' => '',
     ),
@@ -574,7 +574,7 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
 $base_url = 'http://quantum-digital.localhost:8082';
 
 //D6 DB config
-$db_url = 'mysqli://drupaluser@127.0.0.1:33066/quantum_digital';
+$db_url = 'mysqli://drupaluser@127.0.0.1:3306/quantum_digital';
 
 //D7 DB config
 $databases = array('default' => array('default' => array(
@@ -583,5 +583,5 @@ $databases = array('default' => array('default' => array(
     'username' => 'drupaluser',
     'password' => '',
     'host' => '127.0.0.1',
-    'port' => 33066 )));
+    'port' => 3306 )));
 //</@@ADCP_CONF@@>

@@ -13,6 +13,7 @@ regions[sidebar_second] = Sidebar second
 regions[footer] = Footer
 
 stylesheets[screen][] = css/fubik.css
+stylesheets[screen][] = css/custom.css
 scripts[] = js/fubik.js
 
 ; Additional theme settings

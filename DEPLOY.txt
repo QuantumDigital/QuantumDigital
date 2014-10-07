@@ -1,0 +1,44 @@
+Quantum Digital
+Paul Wolborsky
+October 6, 2014
+
+ADDITIONAL CONFIGURATIONS TO SETUP THE SERVER WHEN USING GIT REPOSITORY
+
+Path to Upload to:
+/var/www/quantum-digital.net/www/public_html/
+
+SETUPS
+- Change /sites/quantum-digital.localhots folder name to /sites/quantum-digital.net
+- /sites/quantum-digital.net/settings.php should run as is
+	- Set up blank database quantum_digital for production using phpMyAdmin
+	- Set up user drupaluser | 
+
+	Settings.php should contain this stanza:
+	$databases = array (
+  		'default' => 
+  			array (
+    			'default' => 
+    				array (
+      					'database' => 'quantum_digital',
+      					'username' => 'drupaluser',
+      					'password' => 'm0nK3y!b33p',
+      					'host' => 'localhost',
+      					'port' => '3306',
+      					'driver' => 'mysql',
+      					'prefix' => '',
+    				),
+  			),
+	);
+- File System
+	- ONCE: Log in to the server via putty
+		cd /var/www/quantum-digital.net/www/public_html/sites/quantum-digital.net/
+		chgrp apache files -R
+	- Must be corrected everytime, since local environments have different paths
+	- Login. Go to /admin/config/media -> file System
+		- Change paths to 
+			sites/quantum-digital.net/files 
+			sites/quantum-digital.net/files/private
+
+			and for the tmp folder
+			/tmp
+
